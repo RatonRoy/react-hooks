@@ -1,4 +1,4 @@
-const peopleDatas = [
+const peoplesData = [
     {id : 1, name : 'Rahim'},
     {id : 2, name : 'Belal'},
     {id : 3, name : 'Kamol'},
@@ -6,4 +6,4 @@ const peopleDatas = [
     {id : 5, name : 'Bidhan'},
 ]
 
-export default peopleDatas; 
+export default peoplesData; 
