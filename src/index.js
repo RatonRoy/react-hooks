@@ -4,15 +4,17 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import UseEffectUse from './components/UseEffectUse/UseEffectUse'
+import ContextAPI from './components/ContextAPI/ContextAPI'
 // import UseEffectUse from './components/UseEffectUse/UseEffectUse';
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <UseEffectUse />
+  // <UseEffectUse />
   // <React.StrictMode>
   //   {/* <App /> */}
   //   <UseEffectUse/>
   // </React.StrictMode>
+  <ContextAPI/>
 )
 
 // If you want to start measuring performance in your app, pass a function
