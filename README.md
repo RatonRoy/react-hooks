@@ -1,17 +1,23 @@
 # use of useState hook
 
 ## Remove Item from an array using useState
+````
+const [initialArrayElements, setArrayElements] = useState(initialElements)
 
-- const [initialArrayElements, setArrayElements] = useState(initialElements).
-- create a function like as const removeElement = (id) => {
+````
+**create a function like as**
+ ````
+const removeElement = (id) => {
   - const newElements = initialArrayElements.filter(singleElement) => {
     singleElement.id !== id
     }
 
-* setArrayElements(newElements)
+  setArrayElements(newElements)
   }
 
-# Then make a component like this
+  ````
+
+* Then make a component like this
 
 ```
  <>
@@ -31,3 +37,4 @@
       })}
     </>
 ```
+<span style = 'color : white; background-color : green; font-size : 1.5rem; '>  this is color text   </span>

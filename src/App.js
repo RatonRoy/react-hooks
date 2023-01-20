@@ -15,18 +15,26 @@ function App() {
     <>
       {peoples.map((people) => {
         return (
-          <div className='item'>
-            <RemovePeople
-              key={people.id}
-              people={people}
-              saveRemovePeople={removePeople}
-            />
-            <button className='' onClick={() => removePeople(people.id)}>
-              Remove
-            </button>
-          </div>
+          <>
+            <div className='item'>
+              <RemovePeople
+                key={people.id}
+                people={people}
+                saveRemovePeople={removePeople}
+              />
+              <button className='' onClick={() => removePeople(people.id)}>
+                Remove
+              </button>
+            </div>
+          </>
         )
       })}
+
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <button className='btn' onClick={() => setPeoples([])}>
+          Clear All
+        </button>
+      </div>
     </>
   )
 }
