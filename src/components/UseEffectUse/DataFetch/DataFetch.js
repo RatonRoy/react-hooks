@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react'
 
 const DataFetch = () => {
   const [users, setUsers] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
   const url = 'https://api.github.com/users'
 
   const getUsers = async () => {
     const response = await fetch(url)
     const resUser = await response.json()
+    setIsLoading(false)
     setUsers(resUser)
     // console.log(resUser)
   }
@@ -19,6 +22,23 @@ const DataFetch = () => {
   useEffect(() => {
     getUsers()
   }, [])
+
+  if (isLoading) {
+    return (
+      <>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+          }}
+        >
+          <h1 style={{ textAlign: 'center' }}> Loading........... </h1>
+        </div>
+      </>
+    )
+  }
 
   return (
     <>
