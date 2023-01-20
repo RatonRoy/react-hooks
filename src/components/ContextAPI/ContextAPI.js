@@ -16,34 +16,36 @@ const ContextAPI = () => {
       {/*
        ** Provider component act as a distributer.
        ** wrap the root component.
-       ** have a value props
+       ** have a value props the value become a variable, constant, or a object.
        */}
-      <PersonContext.Provider value='hello context'>
-        <List people={people} removePerson={removePerson} />
+      <PersonContext.Provider value={{ removePerson, people }}>
+        <h1 style={{ textAlign: 'center', color: 'green' }}>
+          {' '}
+          Context API / useContext{' '}
+        </h1>
+        <List />
       </PersonContext.Provider>
     </>
   )
 }
 
-const List = ({ people, removePerson }) => {
+const List = () => {
+  const mainData = useContext(PersonContext)
+  // mainData reserve the full value object
+  console.log(mainData)
   return (
     <>
-      {people.map((person) => {
-        return (
-          <SinglePerson
-            key={person.id}
-            {...person}
-            removePerson={removePerson}
-          />
-        )
+      {mainData.people.map((person) => {
+        return <SinglePerson key={person.id} {...person} />
       })}
     </>
   )
 }
 
-const SinglePerson = ({ id, name, removePerson }) => {
-  const data = useContext(PersonContext)
-  console.log(data)
+const SinglePerson = ({ id, name }) => {
+  // object destructuring
+  const { removePerson } = useContext(PersonContext)
+
   return (
     <div className='item'>
       <h4>{name}</h4>
