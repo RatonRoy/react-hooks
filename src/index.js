@@ -4,12 +4,14 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import FormElements from './components/FormElements/FormElements'
+import UseReducer from './components/UseReducer/UseReducer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     {/* <App /> */}
     <FormElements />
+    <UseReducer />
   </React.StrictMode>
 )
 
