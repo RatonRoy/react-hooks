@@ -112,6 +112,9 @@ p {
   }
   h2 {
     font-size: 2.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: crimson;
   }
   h3 {
     font-size: 1.75rem;
@@ -223,7 +226,7 @@ p {
   background: var(--clr-grey-10);
   border-color: transparent;
   border-radius: var(--radius);
-  padding: 0.25rem 0.5rem;
+  padding: 0.6rem 0.5rem;
 }
 .form-control {
   margin: 0.5rem 0;
