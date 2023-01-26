@@ -153,7 +153,7 @@ p {
   display: inline-block;
   background: var(--clr-primary-5);
   color: var(--clr-white);
-  padding: 0.25rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   border-radius: var(--radius);
   border-color: transparent;
   text-transform: capitalize;
